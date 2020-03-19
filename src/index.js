@@ -55,7 +55,6 @@ app.use(session(
     }
 ));
 
-
 const server = new ApolloServer({
     typeDefs,
     resolvers,
