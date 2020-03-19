@@ -1,0 +1,48 @@
+query GetAllUsers{
+  users{
+    id
+    name
+    username
+  }
+}
+
+query GetSingleUser{
+  user(id: "5e73cf9eba10343d0b60d506"){
+    id
+    name
+    username
+  }
+}
+
+mutation Register{
+  register(
+    email: "mauryanarendra114@gmail.com", 
+    name:"Narendra Maurya", 
+    password: "Nandymandy@123", 
+    username: "nandymandy114"
+  ){
+  	email
+  }
+}
+
+mutation LoginUser{
+  login(username:"nandymandy113", password: "Nandymandy@123"){
+    username
+    name
+    email
+    id
+  }
+}
+
+mutation LogoutUser{
+  logout
+}
+
+query GetProfile {
+  me{
+    id
+    name
+    email,
+    username
+  }
+}
